@@ -8,12 +8,12 @@ subtitle: ''
 description: ''
 keywords:
 author: Paul King
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: http://blog.hoobo.net
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
