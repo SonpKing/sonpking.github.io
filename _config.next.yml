@@ -569,7 +569,7 @@ comments:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true
   # Modify texts or order for any navs, here are some examples.
   nav:
     #disqus:
@@ -720,7 +720,11 @@ busuanzi_count:
 # Search Services
 # See: https://theme-next.js.org/docs/third-party-services/search-services
 # ---------------------------------------------------------------
-
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 # Algolia Search
 # For more information: https://www.algolia.com
 algolia_search:

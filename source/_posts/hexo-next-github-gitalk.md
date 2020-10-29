@@ -1,5 +1,6 @@
 ---
 title: Hexo + Next + GitHub + Gitalk
+comments: true
 categories: 教程
 ---
 本文主要介绍Hexo + Next在GitHub上自动部署教程。
@@ -22,7 +23,7 @@ categories: 教程
 
 ### Github创建博客仓库
 - 登陆GitHub，创建名为username.github.io的仓库。同时创建两个分支，第一个`source`，用于保存源代码，同时设为主分支；第二个分支名为`master`，用于托管博客网页。
-- 找到Settings > github pages。选择branch为`master`。custom domain里填入自己的域名，例如'blog.hoobo.net'。此时source分支里应该多了一个‘CNAME’文件。
+- 找到Settings > github pages。选择branch为`master`。custom domain里填入自己的域名，例如‘blog.hoobo.net’。此时source分支里应该多了一个‘CNAME’文件。
 ![](/images/posts/hexo_next_githu_gitalk01.png)
 - 点击Actions，创建一个新的文件pages.yml，并用下面的代码代替默认代码
 ```yml
@@ -102,5 +103,5 @@ hexo s
 - 浏览器输入自定义域名，例如`blog.hoobo.net`。确认博客部署成功。
 
 ### 更新博客
-- 在'_post'文件夹下创建新的md文件
+- 在‘_post’文件夹下创建新的md文件
 - 参考`推送本地分支到远程分支`
