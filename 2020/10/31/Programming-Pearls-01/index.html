@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"blog.hoobo.net","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="code with zero and one">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://blog.hoobo.net/about/index.html">
+  <meta name="description" content="1 如果不缺内存，如何使用一个具有库的语言实现一种排序算法以表示和排序集合？  123456789101112#include&lt;set&gt;int main()&amp;#123;    set&lt;int&gt; S;    int i;    while(cin &gt;&gt; i)&amp;#123;        S.insert(i);    &amp;#125;    for(int j: S)&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程珠玑第一章习题">
+<meta property="og:url" content="http://blog.hoobo.net/2020/10/31/Programming-Pearls-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="code with zero and one">
+<meta property="og:description" content="1 如果不缺内存，如何使用一个具有库的语言实现一种排序算法以表示和排序集合？  123456789101112#include&lt;set&gt;int main()&amp;#123;    set&lt;int&gt; S;    int i;    while(cin &gt;&gt; i)&amp;#123;        S.insert(i);    &amp;#125;    for(int j: S)&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-31T15:47:45.816Z">
 <meta property="article:modified_time" content="2020-10-31T15:47:45.816Z">
 <meta property="article:author" content="Paul King">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://blog.hoobo.net/about/">
+<link rel="canonical" href="http://blog.hoobo.net/2020/10/31/Programming-Pearls-01/">
 
 
 <script class="page-configurations">
@@ -43,13 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于我 | Hexo
-</title>
+  <title>编程珠玑第一章习题 | Hexo</title>
   
 
 
@@ -209,7 +210,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86"><span class="nav-number">2.</span> <span class="nav-text">工作经历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E8%82%B2%E7%BB%8F%E5%8E%86"><span class="nav-number">3.</span> <span class="nav-text">教育经历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD"><span class="nav-number">4.</span> <span class="nav-text">兴趣爱好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">联系方式</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3"><span class="nav-number">3.</span> <span class="nav-text">3</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -279,56 +280,144 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
       
-  
-  
 
       
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.hoobo.net/2020/10/31/Programming-Pearls-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Paul King">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          编程珠玑第一章习题
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于我
-</h1>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta-container">
-    <div class="post-description">code with zero and one</div>
+      <time title="创建时间：2020-10-31 15:47:45" itemprop="dateCreated datePublished" datetime="2020-10-31T15:47:45+00:00">2020-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" itemprop="url" rel="index"><span itemprop="name">编程珠玑</span></a>
+        </span>
+    </span>
+
   
-
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body">
-          <h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>性别：男</p>
-<p>年份：1996</p>
-<p>星座：白羊</p>
-<h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><p>～</p>
-<h2 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h2><p>浙江大学 ｜ 计算机科学与技术 ｜ 硕士</p>
-<p>西安电子科技大学 ｜ 软件工程 ｜ 学士</p>
-<h2 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a>兴趣爱好</h2><p>旅游 ｜ 摄影 ｜ 火锅 ｜ 健身</p>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p>WeChat: <code>paulking96</code> &amp;&amp; Email: <code>pking96@163.com</code></p>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><blockquote>
+<p>如果不缺内存，如何使用一个具有库的语言实现一种排序算法以表示和排序集合？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; S;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; i)&#123;</span><br><span class="line">        S.insert(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j: S)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;j&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      </div>
-      
-      
-      
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><blockquote>
+<p>如何使用为逻辑运算（如与、或、移位）来实现位向量？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">1000</span>]</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i] != <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clr</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i] &amp;= <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a[i] &amp; <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><blockquote>
+<p>运行时效率是设计目标的一个重要组成部分，所得到的的程序余姚足够高效。在你自己的系统上设计实现位图排序并度量其运行时间。该时间与系统排序的运行时间以及习题1中排序的运行时间相比如何？假设n为10000000，且输入文件包含1000000个整数。</p>
+</blockquote>
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Paul King 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Paul King
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://blog.hoobo.net/2020/10/31/Programming-Pearls-01/" title="编程珠玑第一章习题">http://blog.hoobo.net/2020/10/31/Programming-Pearls-01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/10/31/hexo-next-github-gitalk/" rel="prev" title="Hexo + Next + GitHub + Gitalk">
+                  <i class="fa fa-chevron-left"></i> Hexo + Next + GitHub + Gitalk
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -412,6 +501,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'b89267e753e26303739f',
+      clientSecret: 'cb2e726e94de39632a670d534a2de84f2e7d60f8',
+      repo        : 'sonpking.github.io',
+      owner       : 'SonpKing',
+      admin       : ['SonpKing'],
+      id          : '1c62552fc7b308735fe22351b4a226b5',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

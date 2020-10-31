@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>编程珠玑第一章习题</title>
+    <url>/2020/10/31/Programming-Pearls-01/</url>
+    <content><![CDATA[<h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><blockquote>
+<p>如果不缺内存，如何使用一个具有库的语言实现一种排序算法以表示和排序集合？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; S;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; i)&#123;</span><br><span class="line">        S.insert(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j: S)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;j&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><blockquote>
+<p>如何使用为逻辑运算（如与、或、移位）来实现位向量？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">1000</span>]</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i] != <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clr</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    a[i] &amp;= <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a[i] &amp; <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><blockquote>
+<p>运行时效率是设计目标的一个重要组成部分，所得到的的程序余姚足够高效。在你自己的系统上设计实现位图排序并度量其运行时间。该时间与系统排序的运行时间以及习题1中排序的运行时间相比如何？假设n为10000000，且输入文件包含1000000个整数。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>编程珠玑</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Next + GitHub + Gitalk</title>
-    <url>/2020/10/29/hexo-next-github-gitalk/</url>
+    <url>/2020/10/31/hexo-next-github-gitalk/</url>
     <content><![CDATA[<p>本文主要介绍Hexo + Next在GitHub上自动部署教程。</p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><blockquote>
 <p>一个轻量级的静态博客框架，方便灵活，深受程序员喜爱。</p>
@@ -13,7 +38,7 @@
 <h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><blockquote>
 <p>世界上最大开源项目托管空间，本文借助GitHub托管<a href="https://blog.hoobo.net/">本博客</a>的源代码，利用GitHub Pages托管博客网页，使用GitHub Actions实现博客的自动部署。</p>
 </blockquote>
-<h3 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h3><blockquote>
+<h3 id="gitalk"><a href="#gitalk" class="headerlink" title="gitalk"></a>gitalk</h3><blockquote>
 <p>一款评论系统插件，它是基于GitHub issue实现的。优点是免费，无限空间。缺点是，每一篇博客都需要作者登陆GitHub开启一个新的issue。</p>
 </blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Github创建博客仓库"><a href="#Github创建博客仓库" class="headerlink" title="Github创建博客仓库"></a>Github创建博客仓库</h3><ul>
@@ -54,7 +79,7 @@
   </entry>
   <entry>
     <title>test</title>
-    <url>/2020/10/29/test/</url>
+    <url>/2020/10/31/test/</url>
     <content><![CDATA[<div align='center' ><font size='6'>我将分享我知识和经验</font></div>
 <div align='center' ><font size='4'>欢迎您提出宝贵的意见</font></div>
 
