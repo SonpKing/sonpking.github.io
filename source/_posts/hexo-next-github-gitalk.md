@@ -1,7 +1,7 @@
 ---
 title: Hexo + Next + GitHub + Gitalk
 comments: true
-categories: 教程
+categories: 教程 
 ---
 本文主要介绍Hexo + Next在GitHub上自动部署教程。
 
@@ -16,7 +16,7 @@ categories: 教程
 ### GitHub
 > 世界上最大开源项目托管空间，本文借助GitHub托管[本博客](https://blog.hoobo.net)的源代码，利用GitHub Pages托管博客网页，使用GitHub Actions实现博客的自动部署。
 
-### Gitalk
+### gitalk
 > 一款评论系统插件，它是基于GitHub issue实现的。优点是免费，无限空间。缺点是，每一篇博客都需要作者登陆GitHub开启一个新的issue。
 
 ## 安装
