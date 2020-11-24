@@ -24,5 +24,5 @@ sitemap: false
 旅游 ｜ 摄影 ｜ 火锅 ｜ 健身
 
 ## 联系方式
-WeChat: `paulking96` && Email: `pking96@163.com`
+Email: `pking96@163.com`
 
