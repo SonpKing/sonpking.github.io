@@ -15,7 +15,7 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: http://blog.hoobo.net
 root: /
-permalink: :category/:year/:month/:day/:title/
+permalink: :year/:month/:day/:title/
 permalink_defaults:
   category: post
 pretty_urls:
