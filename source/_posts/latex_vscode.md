@@ -12,9 +12,9 @@ Tex Live 2020
 VScode插件：Latex Workshop, Latex Utilities(用于统计字数)
 
 ## 参数配置
-在项目根目录创建.latexmkrc文件用于`latexmk`命令，内容如下
+在项目根目录创建`.latexmkrc`文件用于`latexmk`命令，内容如下
 ```sh
-$out_dir="out";
+$out_dir="./";
 $pdf_mode=5;
 $xelatex="xelatex -outdir=out";
 $xdvipdfmx="xdvipdfmx -q -E -o %D %O %S";
@@ -57,9 +57,20 @@ $makeindex = 'makeindex -s gind.ist %O -o %D %S';
         "args": [
             "%DOCFILE%"
         ]
+    },
+    {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [] //请不要加参数，因为在.latexmkrc文件中已经定义了参数
     }
 ],
 "latex-workshop.latex.recipes": [ //这里的选项会出现插件中，方便点击使用
+    {
+        "name": "latexmk",
+        "tools": [
+            "latexmk"
+        ]
+    },
     {
         "name": "xelatex",
         "tools": [
@@ -106,7 +117,12 @@ $makeindex = 'makeindex -s gind.ist %O -o %D %S';
 
 ## 编译过程
 ### 方法一
-在根目录运行latexmk, 配置保存在.latexmkrc。
+在根目录运行
+```sh
+latexmk
+```
+注意：配置保存在.latexmkrc。
 ### 方法二
-在workshop插件中先运行xelatex，再运行xe->bib->xe->xe编译参考文献
-![](/images/posts/latex_vscode01.png)
+在workshop插件中运行latexmk（约25s), 推荐！！！
+![](/images/posts/latex_vscode01.png)  
+或者分两步进行，在workshop插件中先运行xelatex编译主体（<10s)，再运行xe->bib->xe->xe编译参考文献。
