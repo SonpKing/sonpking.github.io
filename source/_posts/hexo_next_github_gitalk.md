@@ -2,6 +2,7 @@
 title: Hexo + Next + GitHub + Gitalk
 comments: true
 categories: 教程 
+date: 2020-10-31
 ---
 本文主要介绍Hexo + Next在GitHub上自动部署教程。
 
