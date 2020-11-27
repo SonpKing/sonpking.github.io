@@ -2,7 +2,7 @@
 title: leetcode 1370. 上升下降字符串
 comments: true
 categories: leetcode
-tags: [C++, 题解, 字典]
+tags: [哈希表]
 ---
 
 ## 题目
