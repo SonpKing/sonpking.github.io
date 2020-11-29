@@ -3,7 +3,7 @@ title: leetcode 767. 重构字符串
 comments: true
 categories: leetcode
 tags: [优先队列, 哈希表, 贪心]
-date: 2020-11-29
+date: 2020-11-30
 ---
 
 ## 题目
