@@ -2,7 +2,7 @@
 title: leetcode 976. 三角形的最大周长
 comments: true
 categories: leetcode
-tags: [快排]
+tags: [快排, 贪心]
 date: 2020-11-29
 ---
 
