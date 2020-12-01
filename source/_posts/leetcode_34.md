@@ -4,6 +4,7 @@ comments: true
 categories: leetcode
 tags: [二分]
 date: 2020-12-1
+mathjax: true
 ---
 
 ## 题目
