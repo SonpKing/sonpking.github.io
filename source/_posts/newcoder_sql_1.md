@@ -1,5 +1,5 @@
 ---
-title: newcoder sql1. 查找最晚入职员工的所有信息
+title: NewCoder SQL1. 查找最晚入职员工的所有信息
 comments: true
 categories: newcoder
 tags: [sql]
@@ -8,6 +8,7 @@ date: 2021-01-06
 
 ## 题目
 查找最晚入职员工的所有信息，为了减轻入门难度，目前所有的数据里员工入职的日期都不是同一天(sqlite里面的注释为--,mysql为comment)
+```sql
 CREATE TABLE `employees` (
 `emp_no` int(11) NOT NULL,  -- '员工编号'
 `birth_date` date NOT NULL,
@@ -16,7 +17,7 @@ CREATE TABLE `employees` (
 `gender` char(1) NOT NULL,
 `hire_date` date NOT NULL,
 PRIMARY KEY (`emp_no`));
-
+```
 ## 题解
 最大值和排序两种方法
 
