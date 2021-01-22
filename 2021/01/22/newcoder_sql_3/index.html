@@ -22,22 +22,21 @@
     var CONFIG = {"hostname":"blog.hoobo.net","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="题目有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。 省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。 给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] &#x3D; 1 表示第 i 个城市和第 j 个城市直接相连，而 isConnecte">
+  <meta name="description" content="题目查找各个部门当前(dept_manager.to_date&#x3D;’9999-01-01’)领导当前(salaries.to_date&#x3D;’9999-01-01’)薪水详情以及其对应部门编号dept_no(注:输出结果以salaries.emp_no升序排序，并且请注意输出结果里面dept_no列是最后一列) 原题链接 代码123select s.emp_no, s.salary, s.from_da">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 547. 省份数量">
-<meta property="og:url" content="http://blog.hoobo.net/2021/01/07/leetcode_399%20copy/index.html">
+<meta property="og:title" content="NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息">
+<meta property="og:url" content="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题目有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。 省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。 给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] &#x3D; 1 表示第 i 个城市和第 j 个城市直接相连，而 isConnecte">
+<meta property="og:description" content="题目查找各个部门当前(dept_manager.to_date&#x3D;’9999-01-01’)领导当前(salaries.to_date&#x3D;’9999-01-01’)薪水详情以及其对应部门编号dept_no(注:输出结果以salaries.emp_no升序排序，并且请注意输出结果里面dept_no列是最后一列) 原题链接 代码123select s.emp_no, s.salary, s.from_da">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-07T00:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-07T11:17:47.875Z">
+<meta property="article:published_time" content="2021-01-22T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-22T11:53:38.947Z">
 <meta property="article:author" content="Paul King">
-<meta property="article:tag" content="dfs">
-<meta property="article:tag" content="并查集">
+<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://blog.hoobo.net/2021/01/07/leetcode_399%20copy/">
+<link rel="canonical" href="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/">
 
 
 <script class="page-configurations">
@@ -50,7 +49,7 @@
   };
 </script>
 
-  <title>leetcode 547. 省份数量 | Hexo</title>
+  <title>NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息 | Hexo</title>
   
 
 
@@ -141,7 +140,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">40</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">42</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -151,7 +150,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">24</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -210,7 +209,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -226,7 +225,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -239,7 +238,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -293,7 +292,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hoobo.net/2021/01/07/leetcode_399%20copy/">
+    <link itemprop="mainEntityOfPage" href="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -306,7 +305,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          leetcode 547. 省份数量
+          NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息
         </h1>
 
         <div class="post-meta-container">
@@ -318,7 +317,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-01-07 00:00:00 / 修改时间：11:17:47" itemprop="dateCreated datePublished" datetime="2021-01-07T00:00:00+00:00">2021-01-07</time>
+      <time title="创建时间：2021-01-22 00:00:00 / 修改时间：11:53:38" itemprop="dateCreated datePublished" datetime="2021-01-22T00:00:00+00:00">2021-01-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -326,7 +325,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+          <a href="/categories/newcoder/" itemprop="url" rel="index"><span itemprop="name">newcoder</span></a>
         </span>
     </span>
 
@@ -340,13 +339,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。</p>
-<p>省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
-<p>给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示第 i 个城市和第 j 个城市直接相连，而 isConnected[i][j] = 0 表示二者不直接相连。</p>
-<p>返回矩阵中 省份 的数量。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-provinces">https://leetcode-cn.com/problems/number-of-provinces</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>本题与寻找海中独立的岛屿相类似，从一个点出发遍历它能到达的所有的点并标记，把它们看做一个整体。遍历图中的所有点，如果该点已经被访问了则放弃，否则计数增加1。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findCircleNum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; isConnected)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = isConnected.size();</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">vis</span><span class="params">(n, <span class="literal">false</span>)</span></span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!vis[i])&#123;</span><br><span class="line">                dfs(isConnected, vis, i);</span><br><span class="line">                ++res;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; isConnected, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; &amp;vis, <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>, n = isConnected.size(); j &lt; n; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!vis[j] &amp;&amp; isConnected[i][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                vis[j] = <span class="literal">true</span>;</span><br><span class="line">                dfs(isConnected, vis, j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>查找各个部门当前(dept_manager.to_date=’9999-01-01’)领导当前(salaries.to_date=’9999-01-01’)薪水详情以及其对应部门编号dept_no<br>(注:输出结果以salaries.emp_no升序排序，并且请注意输出结果里面dept_no列是最后一列)</p>
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/c63c5b54d86e4c6d880e4834bfd70c3b?tpId=82&&tqId=29755&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking">原题链接</a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s.emp_no, s.salary, s.from_date, s.to_date, d.dept_no</span><br><span class="line"><span class="keyword">from</span> salaries <span class="keyword">as</span> s <span class="keyword">join</span> dept_manager <span class="keyword">as</span> d <span class="keyword">on</span> s.emp_no = d.emp_no</span><br><span class="line"><span class="keyword">where</span> s.to_date = <span class="string">&#x27;9999-01-01&#x27;</span> <span class="keyword">and</span> d.to_date=<span class="string">&#x27;9999-01-01&#x27;</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -377,7 +372,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://blog.hoobo.net/2021/01/07/leetcode_399%20copy/" title="leetcode 547. 省份数量">http://blog.hoobo.net/2021/01/07/leetcode_399 copy/</a>
+      <a href="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/" title="NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息">http://blog.hoobo.net/2021/01/22/newcoder_sql_3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -386,19 +381,21 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/dfs/" rel="tag"># dfs</a>
-              <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag"># 并查集</a>
+              <a href="/tags/sql/" rel="tag"># sql</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/07/newcoder_sql_2/" rel="prev" title="NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息">
-                  <i class="fa fa-chevron-left"></i> NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息
+                <a href="/2021/01/07/leetcode_547/" rel="prev" title="leetcode 547. 省份数量">
+                  <i class="fa fa-chevron-left"></i> leetcode 547. 省份数量
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/01/22/leetcode_989/" rel="next" title="989. 数组形式的整数加法">
+                  989. 数组形式的整数加法 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -506,7 +503,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'sonpking.github.io',
       owner       : 'SonpKing',
       admin       : ['SonpKing'],
-      id          : '33be7589133ec677192f2c54e5584f42',
+      id          : '5006467e5ace66e7683acbe724752dd7',
         language: '',
       distractionFreeMode: true
     });
