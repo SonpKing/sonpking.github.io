@@ -1,5 +1,5 @@
 ---
-title: NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息
+title: NewCoder SQL3. 查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no
 comments: true
 categories: newcoder
 tags: [sql]
