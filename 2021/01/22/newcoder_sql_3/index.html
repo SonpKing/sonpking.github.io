@@ -24,13 +24,13 @@
 
   <meta name="description" content="题目查找各个部门当前(dept_manager.to_date&#x3D;’9999-01-01’)领导当前(salaries.to_date&#x3D;’9999-01-01’)薪水详情以及其对应部门编号dept_no(注:输出结果以salaries.emp_no升序排序，并且请注意输出结果里面dept_no列是最后一列) 原题链接 代码123select s.emp_no, s.salary, s.from_da">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息">
+<meta property="og:title" content="NewCoder SQL3. 查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no">
 <meta property="og:url" content="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="题目查找各个部门当前(dept_manager.to_date&#x3D;’9999-01-01’)领导当前(salaries.to_date&#x3D;’9999-01-01’)薪水详情以及其对应部门编号dept_no(注:输出结果以salaries.emp_no升序排序，并且请注意输出结果里面dept_no列是最后一列) 原题链接 代码123select s.emp_no, s.salary, s.from_da">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-22T00:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T11:53:38.947Z">
+<meta property="article:modified_time" content="2021-01-28T07:02:01.056Z">
 <meta property="article:author" content="Paul King">
 <meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息 | Hexo</title>
+  <title>NewCoder SQL3. 查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no | Hexo</title>
   
 
 
@@ -140,7 +140,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">42</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">44</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -225,7 +225,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -305,7 +305,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息
+          NewCoder SQL3. 查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no
         </h1>
 
         <div class="post-meta-container">
@@ -315,10 +315,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-01-22 00:00:00 / 修改时间：11:53:38" itemprop="dateCreated datePublished" datetime="2021-01-22T00:00:00+00:00">2021-01-22</time>
+      <time title="创建时间：2021-01-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-22T00:00:00+00:00">2021-01-22</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-01-28 07:02:01" itemprop="dateModified" datetime="2021-01-28T07:02:01+00:00">2021-01-28</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -372,7 +378,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/" title="NewCoder SQL2. 查找入职员工时间排名倒数第三的员工所有信息">http://blog.hoobo.net/2021/01/22/newcoder_sql_3/</a>
+      <a href="http://blog.hoobo.net/2021/01/22/newcoder_sql_3/" title="NewCoder SQL3. 查找各个部门当前领导当前薪水详情以及其对应部门编号dept_no">http://blog.hoobo.net/2021/01/22/newcoder_sql_3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
